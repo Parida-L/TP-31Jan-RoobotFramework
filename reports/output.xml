@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-31T16:08:02.523198" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Tp" source="C:\Users\Administrateur\Desktop\TP-31Jan-RoobotFramework\tests\test_tp.robot">
+<test id="s1-t1" name="Scenario: Add products, login and empty cart" line="11">
+<kw name="Given I Add Products To The Cart After A Search">
+<kw name="Open Browser And Navigate" owner="browser_setup">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:08:03.014875" level="INFO">Opening browser 'chrome' to base url 'http://automationexercise.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-31T16:08:03.014334" elapsed="2.668385"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-31T16:08:05.682983" elapsed="0.034619"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Automation Exercise</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-31T16:08:05.717967" elapsed="0.025171"/>
+</kw>
+<doc>Opens the browser and navigates to the Automation Exercise homepage</doc>
+<status status="PASS" start="2025-01-31T16:08:03.012396" elapsed="2.730917"/>
+</kw>
+<kw name="Accept Cookies" owner="home_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:08:05.744402" level="INFO">Clicking element 'xpath=/html/body/div/div[2]/div[2]/div[2]/div[2]/button[1]'.</msg>
+<arg>${COOKIES_OK_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:08:05.743980" elapsed="0.127703"/>
+</kw>
+<doc>Accepts the cookies on the Automation Exercise website</doc>
+<status status="PASS" start="2025-01-31T16:08:05.743607" elapsed="0.128183"/>
+</kw>
+<kw name="Go To Products Page" owner="home_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:08:05.872305" level="INFO">Clicking element 'xpath=//*[@id="header"]/div/div/div/div[2]/div/ul/li[2]/a'.</msg>
+<arg>${PRODUCTS_NAV_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:08:05.872155" elapsed="2.006325"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>text=All Products</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-31T16:08:07.878631" elapsed="0.011927"/>
+</kw>
+<doc>Clicks on the "Produits" button and waits for the "TOUS LES PRODUITS" page to load</doc>
+<status status="PASS" start="2025-01-31T16:08:05.871941" elapsed="2.018706"/>
+</kw>
+<kw name="Search And Add Products To Cart" owner="products_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:08:07.891175" level="INFO">Typing text 'Dress' into text field 'xpath=//input[@id='search_product']'.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>${product_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:08:07.891030" elapsed="0.162049"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:08:08.053728" level="INFO">Clicking element 'xpath=//button[@id='submit_search']'.</msg>
+<arg>${SEARCH_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:08:08.053360" elapsed="1.498936"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Searched Products</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-31T16:08:09.552580" elapsed="0.011873"/>
+</kw>
+<kw name="Scroll Down" owner="commun">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:08:09.565233" level="INFO">Executing JavaScript:
+window.scrollBy(0, 500)
+Without any arguments.</msg>
+<arg>window.scrollBy(0, ${pixels})</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-31T16:08:09.564876" elapsed="0.031215"/>
+</kw>
+<arg>500</arg>
+<doc>Scrolls down the page by the specified number of pixels</doc>
+<status status="PASS" start="2025-01-31T16:08:09.564673" elapsed="0.031581"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:08:09.596738" level="INFO">Simulating Mouse Over on element 'xpath=/html/body/section[2]/div/div/div[2]/div/div[2]/div/div[1]/div[1]/img'.</msg>
+<arg>${PRODUCT_CARD}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:08:09.596484" elapsed="0.273977"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-31T16:08:11.871404" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-31T16:08:09.870622" elapsed="2.001070"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:08:11.872654" level="INFO">Clicking element 'xpath=//div[@class='features_items']/div[2]//div[@class='product-overlay']//a[.='Add to cart']'.</msg>
+<arg>${ADD_TO_CART}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:08:11.872135" elapsed="0.116328"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-31T16:08:13.989046" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-31T16:08:11.988616" elapsed="2.000700"/>
+</kw>
+<arg>${PRODUCT_NAME}</arg>
+<doc>Searches for a product and adds the first result to the cart</doc>
+<status status="PASS" start="2025-01-31T16:08:07.890804" elapsed="6.098892"/>
+</kw>
+<kw name="Go To View Cart" owner="products_page">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${VIEW_CART}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-31T16:08:13.991525" elapsed="0.015197"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:08:14.007704" level="INFO">Clicking element 'xpath=//*[@id="cartModal"]/div/div/div[2]/p[2]/a'.</msg>
+<arg>${VIEW_CART}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:08:14.007193" elapsed="2.068753"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Shopping Cart</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-31T16:08:16.076130" elapsed="0.013437"/>
+</kw>
+<doc>Clicks on the "View Cart" button to go to the cart page</doc>
+<status status="PASS" start="2025-01-31T16:08:13.990524" elapsed="2.099176"/>
+</kw>
+<kw name="Verify Cart Is Not Empty" owner="cart_page">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:08:16.113029" level="INFO">Element 'xpath=//*[@id="cart_info"]//tr' is displayed.</msg>
+<arg>xpath=//*[@id="cart_info"]//tr</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-31T16:08:16.090151" elapsed="0.022991"/>
+</kw>
+<doc>Checks if the cart contains products ( at least one row (&lt;tr&gt;) is inside the cart table.)</doc>
+<status status="PASS" start="2025-01-31T16:08:16.089896" elapsed="0.023409"/>
+</kw>
+<kw name="Process To Checkout" owner="cart_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:08:16.114703" level="INFO">Clicking element 'xpath=//*[@id="do_action"]/div[1]/div/div/a'.</msg>
+<arg>xpath=//*[@id="do_action"]/div[1]/div/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:08:16.114305" elapsed="0.110699"/>
+</kw>
+<doc>Clicks on the "Proceed to checkout" button to go to the checkout page</doc>
+<status status="PASS" start="2025-01-31T16:08:16.113600" elapsed="0.111564"/>
+</kw>
+<kw name="Go To Login Page From Cart" owner="cart_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:08:16.226639" level="INFO">Clicking element 'xpath=//*[@id="checkoutModal"]/div/div/div[2]/p[2]/a'.</msg>
+<arg>xpath=//*[@id="checkoutModal"]/div/div/div[2]/p[2]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:08:16.226288" elapsed="1.254337"/>
+</kw>
+<doc>Clicks on the "Login" button to go to the login page from the cart</doc>
+<status status="PASS" start="2025-01-31T16:08:16.225716" elapsed="1.255003"/>
+</kw>
+<doc>Adds products to the cart after searching for them</doc>
+<status status="PASS" start="2025-01-31T16:08:03.011620" elapsed="14.469147"/>
+</kw>
+<doc>Test searching for products, adding to cart, logging in, and verifying cart persistence</doc>
+<status status="PASS" start="2025-01-31T16:08:03.010641" elapsed="14.470393"/>
+</test>
+<doc>Test searching for products, adding to cart, logging in, and verifying cart persistence</doc>
+<status status="PASS" start="2025-01-31T16:08:02.524228" elapsed="14.957534"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Tp" id="s1" pass="1" fail="0" skip="0">Test Tp</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

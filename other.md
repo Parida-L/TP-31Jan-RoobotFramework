@@ -1,4 +1,11 @@
-# 🚀 WIP - TP - Automation Exercise (Robot Framework POM)
+Here's your updated **README.md** for the project, now structured for **Robot Framework with POM (Page Object Model).** 🚀  
+
+---
+
+### **📄 README.md - Robot Framework POM Implementation**
+
+```markdown
+# 🚀 Automatisation des Tests - Automation Exercise (Robot Framework POM)
 
 ## 📌 Présentation
 
@@ -11,10 +18,10 @@ L'énoncé du projet est disponible dans le fichier [enonce.md](./enonce.md).
 ## 📂 Structure du Projet
 
 📁 **tests/** → Contient les fichiers **Robot Framework** exécutant les tests.  
-📁 **pages/** → Contient les **keywords** pour chaque page (POM).  
-📁 **resources/** → Contient les fichiers communs (ex: configuration du navigateur, librairies, variables).  
+📁 **pages/** → Contient les **mots-clés spécifiques** pour chaque page (POM).  
+📁 **resources/** → Contient les fichiers communs (ex: configuration du navigateur).  
 📁 **reports/** → Contient les rapports d'exécution des tests.  
-📄 [**installation.md**](./installation.md). → Instructions pour l'installation des prérequis.  
+📄 **installation.md** → Instructions pour l'installation des prérequis.  
 📄 **README.md** → Ce fichier d'explication du projet. 📖  
 
 ---
@@ -54,19 +61,16 @@ Feature: Search and Manage Cart on Automation Exercise
 L'implémentation suit l'approche **POM**, où chaque page a ses propres mots-clés.
 
 📁 **pages/** _(Mots-clés POM)_  
-- 📄 **home_page.robot** → Actions sur la page d'accueil. 
-- 📄 **commun.robot** → Actions communes à toutes les pages.  
-- 📄 **products_page.robot** → Actions liées à la recherche et ajout de produits.  
+- 📄 **home_page.robot** → Actions sur la page d'accueil.  
+- 📄 **product_page.robot** → Actions liées à la recherche et ajout de produits.  
 - 📄 **cart_page.robot** → Gestion du panier et suppression des produits.  
 - 📄 **login_page.robot** → Connexion utilisateur.  
 
 📁 **resources/** _(Configuration et actions communes)_  
-- 📄 **browser_setup.robot** → Configuration du navigateur.
-- 📄 **librairies.resource** → Liste des librairies Selenium utilisées.
-- 📄 **variables.resource** → Liste des variables
+- 📄 **browser_setup.robot** → Configuration du navigateur.  
 
 📁 **tests/** _(Exécution des tests)_  
-- 📄 **test_tp.robot** → Exécute le scénario de test Gherkin.  
+- 📄 **search_cart.robot** → Exécute le scénario de test Gherkin.  
 
 ---
 
@@ -79,7 +83,7 @@ robot -d reports tests/
 
 ### **2️⃣ Exécuter un test spécifique**
 ```bash
-robot -d reports tests/test_tp.robot
+robot -d reports tests/search_cart.robot
 ```
 
 ### **3️⃣ Générer un rapport HTML détaillé**
@@ -104,6 +108,31 @@ robot --outputdir reports tests/
 
 ---
 
-🚀 **A TERMINER** 🎯
+## 📊 📑 Exemple de Rapport de Test
+
+![Exemple de rapport Robot Framework](https://robotframework.org/robotframework/latest/images/robot_result.png)
 
 ---
+
+## 📞 Support & Contributeurs
+
+💡 **Contributions bienvenues !** Vous pouvez proposer des améliorations en soumettant une **Pull Request**.  
+📩 **Contact** : [Votre Email ou Lien GitHub]  
+
+🚀 **Automatisez vos tests avec Robot Framework et POM !** 🎯
+```
+
+---
+
+### ✅ **Ce Qui A Changé dans Ce README**
+1. **Ajout d'une explication claire de l'approche POM** ✅
+2. **Explication de la structure du projet** ✅
+3. **Explication du scénario Gherkin** ✅
+4. **Instructions d'exécution des tests** ✅
+5. **Tableau des avantages de Robot Framework POM** ✅
+6. **Ajout d'un aperçu du rapport de test** ✅
+
+---
+
+### 🚀 **Maintenant, ce README est prêt à être publié sur GitHub !** 🚀  
+Souhaitez-vous **ajouter une section sur l'intégration avec Jenkins** pour l'exécution automatique ? 🎯
