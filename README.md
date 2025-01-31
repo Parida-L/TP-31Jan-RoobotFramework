@@ -1,4 +1,4 @@
-# 🚀 WIP - TP - Automation Exercise (Robot Framework POM)
+# 🚀 TP - Automation Exercise (Robot Framework POM)
 
 ## 📌 Présentation
 
@@ -104,6 +104,6 @@ robot --outputdir reports tests/
 
 ---
 
-🚀 **A TERMINER** 🎯
+🚀 **Possibles Ameliorations** 🎯
 
 ---

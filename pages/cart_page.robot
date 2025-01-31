@@ -2,7 +2,9 @@
 Resource    ../resources/libraries.resource
 
 *** Variables ***
-${DELETE_BUTTON}     xpath=//*[@id="product-3"]/td[6]/a
+${DELETE_PDT1}       xpath=//*[@id="product-33"]/td[6]/a
+${DELETE_PDT2}       xpath=//*[@id="product-35"]/td[6]/a
+${DELETE_PDT3}       xpath=//*[@id="product-37"]/td[6]/a
 ${EMPTY_CART_MSG}    Cart is empty! Click here to buy products.
 
 *** Keywords ***
@@ -20,7 +22,9 @@ Go To Login Page From Cart
 
 Delete All Products
     [Documentation]  Deletes all products from the shopping cart
-    Click Element    ${DELETE_BUTTON}
+    Click Element    ${DELETE_PDT1}
+    Click Element    ${DELETE_PDT2}
+    Click Element    ${DELETE_PDT3}
 
 Verify Cart Is Empty
     [Documentation]  Verifies that the cart is empty by checking for the empty cart message
