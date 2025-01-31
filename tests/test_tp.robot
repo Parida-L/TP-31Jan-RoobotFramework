@@ -11,9 +11,9 @@ Resource         ../resources/variables.resource
 Scenario: Add products, login and empty cart
     [Documentation]  Test searching for products, adding to cart, logging in, and verifying cart persistence
     Given I Add Products To The Cart After A Search
-#     And I Log Into My Account
-#     When I Delete All The Products Added From The Cart
-#     Then The Cart Is Empty
+    And I Log Into My Account
+    When I Delete All The Products Added From The Cart
+    Then The Cart Is Empty
 
 *** Keywords ***
 I Add Products To The Cart After A Search
@@ -41,4 +41,4 @@ I Delete All The Products Added From The Cart
 The Cart Is Empty
      [Documentation]  Verifies that the cart is empty
      Verify Cart Is Empty
-     Close Browser
+     Close Page

@@ -12,6 +12,6 @@ Open Browser And Navigate
     Maximize Browser Window
     Wait Until Page Contains    Automation Exercise
 
-Close Browser
+Close Page
     [Documentation]  Closes the browser session after the test
     Close Browser
